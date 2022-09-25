@@ -1,0 +1,9 @@
+dist/
+node_modules/
+/.idea
+.DS_Store
+Thumbs.db
+.firebase/
+.firebaserc
+.runtimeconfig.json
+*.log
