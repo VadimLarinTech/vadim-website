@@ -4,10 +4,12 @@
   "license": "MIT",
   "scripts": {
     "start": "parcel src/index.html",
-    "build": "parcel build"
+    "build": "parcel build src/index.html",
+    "deploy": "yarn build && firebase deploy"
   },
   "devDependencies": {
     "@tailwindcss/forms": "^0.5.3",
+    "firebase-tools": "^11.10.0",
     "parcel": "^2.7.0",
     "postcss": "^8.4.16",
     "posthtml-include": "^1.7.4",
