@@ -17,22 +17,25 @@
           Sign up to the Defisitary newsletter for the latest news, updates and exclusive invites
         </p>
 
-        <div class="flex gap-3" data-coming-soon>
+        <div class="flex gap-3">
           <input
+            id="subscribe-email-input"
             type="email"
             name="email"
             class="flex-auto px-3 py-2 bg-white border shadow-sm border-blue-400 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block rounded-lg focus:ring-1"
             placeholder="Enter your email"
+            style="width: 0; /*fixes bug with too wide screen on mobile*/"
           />
 
           <button
-            id="subbit-button"
-            class="inline-flex items-center rounded-lg border border-blue-400 bg-blue-400 px-2.5 py-1 text-white shadow-lg hover:bg-blue-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2"
+            id="subscribe-email-button"
+            class="btn inline-flex items-center justify-center rounded-lg border border-blue-400 bg-blue-400 px-2.5 py-1 text-white shadow-lg hover:bg-blue-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2"
           >
-            Submit
+            <div class="w-6 h-6 loading"></div>
+            <span class="btn__text">Submit</span>
           </button>
-          <include src="src/partials/coming-soon.html"></include>
         </div>
+        <p id="subscribe-email-validation" class="text-red-500" style="display: none"></p>
       </div>
 
       <div class="bg-white py-8 px-4 shadow-lg rounded-lg sm:px-10 md:w-96">

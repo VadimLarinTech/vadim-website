@@ -4,8 +4,13 @@
   "license": "MIT",
   "scripts": {
     "start": "parcel src/index.html",
-    "build": "parcel build src/index.html",
-    "deploy": "yarn build && firebase deploy"
+    "build": "yarn build:hosting && yarn build:functions",
+    "build:hosting": "parcel build src/index.html",
+    "build:functions": "yarn --cwd functions build",
+    "deploy": "firebase deploy",
+    "emulator": "yarn emulator:kill && firebase emulators:start",
+    "emulator:kill": "lsof -t -i :5001 -i:5002 | xargs kill -9",
+    "postinstall": "yarn --cwd functions install --frozen-lockfile --non-interactive"
   },
   "devDependencies": {
     "@tailwindcss/forms": "^0.5.3",
@@ -15,8 +20,5 @@
     "posthtml-include": "^1.7.4",
     "prettier": "^2.7.1",
     "tailwindcss": "^3.1.8"
-  },
-  "dependencies": {
-    "yarn": "^1.22.19"
   }
 }
