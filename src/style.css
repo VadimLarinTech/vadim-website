@@ -16,7 +16,7 @@ button {
 }
 
 ul.logo-bullets > li {
-  background: url('./assets/icon.svg') left center no-repeat;
+  background: url('assets/images/icon.svg') left center no-repeat;
 }
 
 .grecaptcha-badge {
