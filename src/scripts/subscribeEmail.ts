@@ -1,3 +1,5 @@
+import { onInit, addScript } from './_helpers';
+
 // Add Google Recaptcha v3
 const RECAPTCHA_PUBLIC_KEY = '6LffxHgiAAAAAIIEnl8fqftW3MjtcpsWmn87rwse';
 addScript(`https://www.google.com/recaptcha/api.js?render=${RECAPTCHA_PUBLIC_KEY}`);
@@ -16,7 +18,7 @@ onInit(() => {
   subscribeEmailEls.input.addEventListener('keyup', e => e.keyCode === 13 && subscribeEmail());
 });
 
-function subscribeEmail() {
+function subscribeEmail(): void {
   grecaptcha.ready(async () => {
     const recaptchaToken = await grecaptcha.execute(RECAPTCHA_PUBLIC_KEY, { action: 'subscribeEmail' });
     const email = document.querySelector('#subscribe-email-input').value.trim();
@@ -47,13 +49,13 @@ function subscribeEmail() {
   });
 }
 
-function isEmailValid(email) {
+function isEmailValid(email): boolean {
   const regex =
     /^[-!#$%&'*+\/0-9=?A-Z^_a-z`{|}~](\.?[-!#$%&'*+\/0-9=?A-Z^_a-z`{|}~])*@[a-zA-Z0-9](-*\.?[a-zA-Z0-9])*\.[a-zA-Z](-?[a-zA-Z0-9])+$/;
   return regex.test(email);
 }
 
-function displayErrorMessage(message = '') {
+function displayErrorMessage(message = ''): void {
   if (!message) {
     subscribeEmailEls.validation.style.display = 'none';
     return;
@@ -62,7 +64,7 @@ function displayErrorMessage(message = '') {
   subscribeEmailEls.validation.style.display = 'block';
 }
 
-function updateButtonLoadingState(state) {
+function updateButtonLoadingState(state): void {
   switch (state) {
     case 'loading': {
       subscribeEmailEls.button.classList.add('loading--running');

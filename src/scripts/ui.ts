@@ -1,6 +1,8 @@
+import { onInit } from './_helpers';
+
 onInit(handleComingSoonBlocks);
 
-function handleComingSoonBlocks() {
+function handleComingSoonBlocks(): void {
   const messageSelector = `[data-coming-soon]`;
   const hiddenClassName = 'hidden';
   const visibleClassName = 'absolute';
