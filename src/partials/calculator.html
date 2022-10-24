@@ -1,5 +1,5 @@
 <dialog id="calculatorDialog" inert loading modal-mode="mega">
-  <form method="dialog" class="p-5">
+  <form method="dialog" class="p-20 px-20">
     <button
       onclick="this.closest('dialog').close('close')"
       type="button"
@@ -23,23 +23,24 @@
       </svg>
     </button>
 
-    <div class="bg-white py-8 px-4 rounded-lg sm:px-10 md:w-96">
+    <div class="bg-white py-1 px-2 rounded-lg sm:px-10 md:w-96">
       <h1 class="text-3xl font-bold text-gray-800 text-center mb-5">Calculator</h1>
-        <label for="">Liquidity pool amount, USD</label>
-        <div class="flex gap-3">
-          <input
-            id="subscribe-email-input"
-            type="email"
-            name="email"
-            class="flex-auto px-2 py-1 bg-white border shadow-sm border-gray-500 placeholder-slate-400 focus:outline-none focus:border-gray-500 focus:ring-gray-500 block rounded-lg focus:ring-1"
-            placeholder="0"
-            style="width: 0; /*fixes bug with too wide screen on mobile*/"
-          />
-        </div>
-      </div>
     </div>
 
-    <div class="bg-white py-8 px-4 rounded-lg sm:px-10 md:w-96">
+    <div class="bg-white py-1 px-2 rounded-lg sm:px-10 md:w-96">
+      <label for="">Liquidity pool amount, USD</label>
+      <div class="flex gap-3">
+        <input
+          id="subscribe-email-input"
+          type="email"
+          name="email"
+          class="flex-auto px-2 py-1 bg-white border shadow-sm border-gray-500 placeholder-slate-400 focus:outline-none focus:border-gray-500 focus:ring-gray-500 block rounded-lg focus:ring-1"
+          placeholder="0"
+          style="width: 0; /*fixes bug with too wide screen on mobile*/"
+        />
+      </div>
+    </div>
+    <div class="bg-white py-1 px-2 rounded-lg sm:px-10 md:w-96">
       <label for="">Pool APR, %</label>
       <div class="flex gap-3">
         <input
@@ -53,7 +54,7 @@
       </div>
     </div>
 
-    <div class="bg-white py-8 px-4 rounded-lg sm:px-10 md:w-96">
+    <div class="bg-white py-1 px-2 rounded-lg sm:px-10 md:w-96">
       <label for="">Fee, %</label>
       <div class="flex gap-3">
         <input
@@ -67,7 +68,7 @@
       </div>
     </div>
 
-     <div class="bg-white py-8 px-4 rounded-lg sm:px-10 md:w-96">
+    <div class="bg-white py-1 px-2 rounded-lg sm:px-10 md:w-96">
       <label for="">Profit share, %</label>
       <div class="flex gap-3">
         <input
@@ -79,23 +80,38 @@
           style="width: 0; /*fixes bug with too wide screen on mobile*/"
         />
       </div>
+      <input type="range" min="1" max="100" value="50" name="fee"></input>
     </div>
-    
-    <input type="range" min="1" max="100" value="50" name="fee">
 
+  <div class="bg-white py-1 px-2 rounded-lg sm:px-10 md:w-96">
     <label>Lock value term</label>
-      
-      <input type="range" min="1" max="100" value="50" name="fee">
 
-    
-          <a href="https://forms.gle/iZCoVxkCCdXVDDFLA" target="_blank">
-            <button
-              type="button"
-              class="inline-flex items-center rounded-lg border border-blue-400 bg-blue-400 px-1 py-1.5 text-lg text-white shadow-lg hover:bg-blue-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2"
-            >
-              Calculate
-            </button>
-          </a>
-   <div></div>
+    <input type="range" min="1" max="100" value="50" name="fee" />
+
+    <a href="https://forms.gle/iZCoVxkCCdXVDDFLA" target="_blank">
+      
+      <button
+        type="button"
+        class="inline-flex items-center rounded-lg border bg-white px-5 py-1.5 text-lg text-gray-500 shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2"
+      >
+        0
+      </button>
+    </a>
+   
+    <form>
+      <select name="years" class="rounded-md border border-blue-400 bg-blue-400 px-1 py-1.5 text-white ">
+        <option value="years">years</option>
+      </select>
+    </form>
+  </div>
+
+    <a href="https://forms.gle/iZCoVxkCCdXVDDFLA" target="_blank">
+      <button
+        type="button"
+        class="inline-flex items-center rounded-lg border border-blue-400 bg-blue-400 px-1 py-1.5 text-lg text-white shadow-lg hover:bg-blue-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2"
+      >
+        Calculate
+      </button>
+    </a>
   </form>
 </dialog>
