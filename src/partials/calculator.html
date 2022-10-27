@@ -1,111 +1,118 @@
 <dialog id="calculatorDialog" inert loading modal-mode="mega" class="rounded-lg border border-blue-400">
-  <form method="dialog" class="p-6">
-    <button
-      onclick="this.closest('dialog').close('close')"
-      type="button"
-      title="Close dialog"
-      class="absolute text-blue-500"
-      style="top: 10px; right: 10px"
-    >
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="36"
-        height="36"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        class="feather feather-x"
-      >
-        <line x1="18" y1="6" x2="6" y2="18"></line>
-        <line x1="6" y1="6" x2="18" y2="18"></line>
-      </svg>
-    </button>
-
-    <div>
-      <h1 class="text-3xl font-bold text-gray-800 text-center mb-5">Calculator</h1>
-    </div>
-
-    <div class="mb-3">
-      <label for="">Liquidity pool amount, USD</label>
-      <input
-        type="number"
-        name="lpa"
-        class="w-full flex-auto px-3 py-2 bg-white border shadow-sm border-blue-400 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block rounded-lg focus:ring-1"
-        placeholder="0"
-      />
-    </div>
-
-    <div class="mb-3">
-      <label for="">Pool APR, %</label>
-      <input
-        type="number"
-        name="papr"
-        class="w-full flex-auto px-3 py-2 bg-white border shadow-sm border-blue-400 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block rounded-lg focus:ring-1"
-        placeholder="0"
-      />
-    </div>
-
-    <div class="mb-3">
-      <label for="">Fee, %</label>
-
-      <input
-        type="number"
-        name="fee"
-        class="w-full flex-auto px-3 py-2 bg-white border shadow-sm border-blue-400 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block rounded-lg focus:ring-1"
-        placeholder="0"
-      />
-    </div>
-
-    <div class="mb-3">
-      <label for="">Profit share, %</label>
-      <div class="flex gap-3">
-        <input type="range" min="1" max="100" value="50" name="ps" class="flex-1" />
-        <input
-          type="number"
-          name="ps"
-          class="flex-initial px-3 py-2 bg-white border shadow-sm border-blue-400 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block rounded-lg focus:ring-1"
-          style="width: 60px"
-          placeholder="0"
-        />
-      </div>
-    </div>
-
-    <div class="mb-3">
-      <label for="">Lock value term</label>
-      <div class="flex gap-3">
-        <input type="range" min="1" max="12" value="1" name="ps" class="flex-1" style="width: 90px" />
-        <input
-          type="number"
-          name="lvt"
-          class="flex-initial px-3 py-2 bg-white border shadow-sm border-blue-400 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block rounded-lg focus:ring-1"
-          style="width: 60px"
-          placeholder="0"
-        />
-        <select
-          name="years"
-          class="rounded-md border border-blue-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500"
-        >
-          <option selected value="365">Years</option>
-          <option value="31">Months</option>
-          <option value="1">Days</option>
-        </select>
-      </div>
-    </div>
-
-    <a href="https://forms.gle/iZCoVxkCCdXVDDFLA" target="_blank">
+  <form method="dialog">
+    <div class="p-6">
       <button
+        onclick="this.closest('dialog').close('close')"
         type="button"
-        class="inline-flex items-center rounded-lg border border-blue-400 bg-blue-400 px-2.5 py-1.5 text-lg text-white shadow-lg hover:bg-blue-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2"
+        title="Close dialog"
+        class="absolute text-blue-500"
+        style="top: 10px; right: 10px"
       >
-        Fill form
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="36"
+          height="36"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="feather feather-x"
+        >
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
       </button>
-    </a>
 
-    <div class="py-16 bg-blue-400 bg-cover border-t-2">
-      <h1 class="text-3xl font-bold text-gray-800 text-center mb-5">Your Payment $0</h1>
+      <div>
+        <h1 class="text-3xl font-bold text-gray-800 text-center mb-5">Calculator</h1>
+      </div>
+
+      <div class="mb-3">
+        <label for="lpaInput">Liquidity pool amount, USD</label>
+        <input
+          type="number"
+          id="lpaInput"
+          name="lpa"
+          class="w-full flex-auto px-3 py-2 bg-white border shadow-sm border-blue-400 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block rounded-lg focus:ring-1"
+          placeholder="0"
+        />
+      </div>
+
+      <div class="mb-3">
+        <label for="paprInput">Pool APR, %</label>
+        <input
+          type="number"
+          id="paprInput"
+          name="papr"
+          class="w-full flex-auto px-3 py-2 bg-white border shadow-sm border-blue-400 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block rounded-lg focus:ring-1"
+          placeholder="0"
+        />
+      </div>
+
+      <div class="mb-3">
+        <label for="feeInput">Fee, %</label>
+
+        <input
+          type="number"
+          id="feeInput"
+          name="fee"
+          class="w-full flex-auto px-3 py-2 bg-white border shadow-sm border-blue-400 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block rounded-lg focus:ring-1"
+          placeholder="0"
+        />
+      </div>
+
+      <div class="mb-3">
+        <label for="psInput">Profit share, %</label>
+        <div class="flex gap-3">
+          <input type="range" id="psInput" name="ps" min="1" max="100" value="50" class="flex-1" />
+          <input
+            type="number"
+            name="ps"
+            class="flex-initial px-3 py-2 bg-white border shadow-sm border-blue-400 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block rounded-lg focus:ring-1"
+            style="width: 60px"
+            placeholder="0"
+          />
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label for="lvtInput">Lock value term</label>
+        <div class="flex gap-3">
+          <input type="range" id="lvtInput" name="lvt" min="1" max="365" value="1" class="flex-1" style="width: 90px" />
+          <input
+            type="number"
+            name="lvt"
+            class="flex-initial px-3 py-2 bg-white border shadow-sm border-blue-400 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block rounded-lg focus:ring-1"
+            style="width: 60px"
+            placeholder="0"
+          />
+          <select
+            name="years"
+            class="rounded-md border border-blue-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500"
+          >
+            <option selected value="365">Years</option>
+            <option value="31">Months</option>
+            <option value="1">Days</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="p-6 bg-blue-400 text-center">
+      <h3 class="text-white mb-5">
+        <span class="text-2xl mr-2">Your Payment</span>
+        <span class="text-3xl font-bold" id="calculatorResult">$0</span>
+      </h3>
+
+      <a href="https://forms.gle/iZCoVxkCCdXVDDFLA" target="_blank">
+        <button
+          type="button"
+          class="inline-flex items-center rounded-lg border border-blue-400 bg-gray-50 px-2.5 py-1.5 text-lg text-blue-400 shadow-lg hover:bg-gray-200 hover:text-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2"
+        >
+          Fill form
+        </button>
+      </a>
     </div>
   </form>
 </dialog>

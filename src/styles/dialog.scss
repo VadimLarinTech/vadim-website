@@ -10,14 +10,14 @@ dialog {
   display: grid;
   background: white;
   max-inline-size: 90vw;
-  max-block-size: min(80vh, 100%);
-  max-block-size: min(80dvb, 100%);
+  max-block-size: min(90vh, 100%);
+  max-block-size: min(90dvb, 100%);
   margin: auto;
   padding: 0;
   position: fixed;
   inset: 0;
   z-index: 50;
-  overflow: hidden;
+  overflow-y: auto;
   transition: opacity 0.5s ease-in;
 
   &:not([open]) {
@@ -45,8 +45,8 @@ dialog {
     display: grid;
     grid-template-rows: auto 1fr auto;
     align-items: start;
-    max-block-size: 80vh;
-    max-block-size: 80dvb;
+    max-block-size: 90vh;
+    max-block-size: 90dvb;
 
     & > article {
       overflow-y: auto;
