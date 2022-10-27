@@ -42,9 +42,6 @@ dialog {
   }
 
   & > form {
-    display: grid;
-    grid-template-rows: auto 1fr auto;
-    align-items: start;
     max-block-size: 90vh;
     max-block-size: 90dvb;
 
