@@ -35,8 +35,9 @@
           type="number"
           id="lpaInput"
           name="lpa"
-          class="w-full flex-auto px-3 py-2 bg-white border shadow-sm border-blue-400 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block rounded-lg focus:ring-1"
+          class="w-full flex-auto px-3 py-2 bg-white border shadow-sm border-blue-400 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block rounded-lg focus:ring-1 pr-px"
           placeholder="0"
+          value="1000000"
         />
       </div>
 
@@ -46,8 +47,9 @@
           type="number"
           id="paprInput"
           name="papr"
-          class="w-full flex-auto px-3 py-2 bg-white border shadow-sm border-blue-400 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block rounded-lg focus:ring-1"
+          class="w-full flex-auto px-3 py-2 bg-white border shadow-sm border-blue-400 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block rounded-lg focus:ring-1 pr-px"
           placeholder="0"
+          value="15"
         />
       </div>
 
@@ -58,8 +60,9 @@
           type="number"
           id="feeInput"
           name="fee"
-          class="w-full flex-auto px-3 py-2 bg-white border shadow-sm border-blue-400 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block rounded-lg focus:ring-1"
+          class="w-full flex-auto px-3 py-2 bg-white border shadow-sm border-blue-400 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block rounded-lg focus:ring-1 pr-px"
           placeholder="0"
+          value="15"
         />
       </div>
 
@@ -70,9 +73,10 @@
           <input
             type="number"
             name="ps"
-            class="flex-initial px-3 py-2 bg-white border shadow-sm border-blue-400 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block rounded-lg focus:ring-1"
+            class="flex-initial px-3 py-2 bg-white border shadow-sm border-blue-400 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block rounded-lg focus:ring-1 pr-px"
             style="width: 60px"
             placeholder="0"
+            value="50"
           />
         </div>
       </div>
@@ -84,12 +88,13 @@
           <input
             type="number"
             name="lvt"
-            class="flex-initial px-3 py-2 bg-white border shadow-sm border-blue-400 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block rounded-lg focus:ring-1"
+            class="flex-initial px-3 py-2 bg-white border shadow-sm border-blue-400 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block rounded-lg focus:ring-1 pr-px"
             style="width: 60px"
             placeholder="0"
+            value="1"
           />
           <select
-            name="years"
+            name="lvtType"
             class="rounded-md border border-blue-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500"
           >
             <option selected value="365">Years</option>
@@ -100,7 +105,7 @@
       </div>
     </div>
 
-    <div class="flex flex-col justify-between p-6 bg-blue-400 text-center md:pt-12">
+    <div class="flex flex-col justify-between p-6 bg-blue-400 text-center md:pt-12 md:min-w-[300px]">
       <h3 class="flex flex-col justify-center gap-3 text-white mb-5">
         <span class="text-2xl mr-2">Your Payment</span>
         <span class="text-3xl font-bold" id="calculatorResult">$0</span>
